@@ -1,35 +1,30 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { AppComponent } from './app.component';
-import { SecondComponent } from './second/second.component';
-import { ThirdComponent } from './third/third.component';
-import { FourthComponent } from './fourth/fourth.component';
 import { RouterModule } from '@angular/router';
 import { FormsModule } from '@angular/forms';
+import { WorkingComponent } from './working/working.component';
 @NgModule({
   declarations: [
     AppComponent,
-    SecondComponent,
-    ThirdComponent,
-    FourthComponent,
+    WorkingComponent,
   ],
   imports: [
     BrowserModule,
     FormsModule,
     RouterModule.forRoot([
-      {
-        path: 'second',
-        component: SecondComponent
-      },
      {
-        path: 'third',
-        component: ThirdComponent
-      },
+       path:"working",
+       component:WorkingComponent
+     },
      {
-        path: 'fourth',
-        component: FourthComponent
-      }
+       path:'',
+       redirectTo:'/working',
+       pathMatch:'full'
+     }
+
     ])
+    
   ],
   providers: [],
   bootstrap: [AppComponent]
