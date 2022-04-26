@@ -5,22 +5,21 @@
   }
   body{
       position: relative;
+      
   }
   .parent{
-      caret-color: black;
-      width: 540px;
-      margin-top: 70px;
-      width: 540px;
-      padding: 62px 26px 0 25px;
-      box-shadow: 0 12px 24px 0 rgb(0 0 0 / 20%);
-      border: solid 1px rgba(255, 255, 255, 0.5);
-      background-color: #1d1b43;
-      border-radius: 10px 10px 0px 0px;
-      position: absolute;
-      right: 230px;
-      top: 15px;
-      height: 550px;
-  }
+    caret-color: black;
+    width: 32%;
+    padding: 62px 26px 0 25px;
+    box-shadow: 0 12px 24px 0 rgb(0 0 0 / 20%);
+    border: solid 1px rgba(255, 255, 255, 0.5);
+    background-color: #1d1b43;
+    border-radius: 10px 10px 0px 0px;
+    position: absolute;
+    right: 14%;
+    top: 11%;
+    height: 600px;
+}
   .btn-parent{
       display: flex;
       justify-content: space-between;
