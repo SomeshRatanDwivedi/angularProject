@@ -23,13 +23,13 @@ export class WorkingComponent implements OnInit {
   selected = "btn1";
   selectedfont = "";
   selectedyear = "";
+
   onSubmit(ele: any) {
 
   }
   changeColor(btn: any) {
 
     this.selected = btn;
-    console.log(this.selected)
   }
 
   onClick(font: any) {

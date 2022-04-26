@@ -1,5 +1,8 @@
+
+
 <div class="parent">
     <h1>Just a few simple steps before we know it's you</h1>
+    <div class="line"></div>
     <div class="btn-parent">
       <button class="btn" [ngClass]=" {'blue':selected=='btn1' || selected=='btn2' || selected=='btn3' || selected=='btn4'}" (click)="changeColor(btn1)"> 1 </button>
       <button class="btn" [ngClass]=" {'blue':selected=='btn2' || selected=='btn3' || selected=='btn4'}"  (click)="changeColor(btn2)" > 2 </button>
@@ -8,7 +11,7 @@
   
   </div>
   <div class="first-component"  *ngIf="selected=='btn1'">
-    <h3>Your registered mobile number</h3>
+    <h1>Your registered mobile number</h1>
     <form  #firstcomponent="ngForm" class="form" (ngSubmit)="onSubmit(firstcomponent.value)">
       <input class="input" type="text" name="phone" required [(ngModel)]="phoneNo" >
       <button type="submit" (click)="changeColor(btn2)">Log  &nbsp; -></button>
@@ -92,10 +95,10 @@
   <div class="first-component"  *ngIf="selected=='btn4'">
     <h1>Enter the otp</h1>
       <form  #firstcomponent="ngForm" class="form" (ngSubmit)="onSubmit(firstcomponent.value)">
-        <input class="otp-input" type="text" name="phone" required maxlength="1" style="width: 50px; height: 50px;">
-        <input class="otp-input" type="text" name="phone" required maxlength="1" style="width: 50px; height: 50px;">
-        <input class="otp-input" type="text" name="phone" required maxlength="1" style="width: 50px; height: 50px;">
-        <input class="otp-input" type="text" name="phone" required maxlength="1" style="width: 50px; height: 50px;">
+        <input class="otp-input" type="text" name="phone" required maxlength="1">
+        <input class="otp-input" type="text" name="phone" required maxlength="1">
+        <input class="otp-input" type="text" name="phone" required maxlength="1">
+        <input class="otp-input" type="text" name="phone" required maxlength="1">
         <button class="otp-btn" type="submit">Log  &nbsp; -></button>
       </form>
   </div>
