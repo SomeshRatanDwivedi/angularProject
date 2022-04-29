@@ -20,9 +20,12 @@ export class WorkingComponent implements OnInit {
   year2 = "year2"
   year3 = "year3"
   year4 = "year4"
-  selected = "btn1";
+  selected = "";
   selectedfont = "";
   selectedyear = "";
+  constructor(){
+    this.selected=this.btn1;
+  }
 move(ele:any, prev:any, curr:any, next:any){
   
   if(ele.key=="Backspace"){

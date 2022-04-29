@@ -14,7 +14,7 @@
     <p class="subhead">Your registered mobile number</p>
     <form  #firstcomponent="ngForm" class="form" (ngSubmit)="onSubmit(firstcomponent.value)">
       <input class="input" type="text" name="phone" required [(ngModel)]="phoneNo" >
-      <button class="login" type="submit" (click)="changeColor(btn2)">Log  <i class="fa-solid fa-arrow-right"></i></button>
+      <button class="login" type="submit" (click)="changeColor(btn2)">Login  <i class="fa-solid fa-arrow-right"></i></button>
     </form>
   </div>
   <div class="first-component"  *ngIf="selected=='btn2'">
@@ -95,11 +95,11 @@
   <div class="first-component"  *ngIf="selected=='btn4'">
     <p class="subhead">Enter the otp</p>
       <form  #firstcomponent="ngForm" class="form" (ngSubmit)="onSubmit(firstcomponent.value)">
-        <input class="otp-input" type="text" name="phone" required maxlength="1" #text1 (keyup)="move($event, '', text1, text2)">
-        <input class="otp-input" type="text" name="phone" required maxlength="1" #text2 (keyup)="move($event, text1, text2, text3)">
-        <input class="otp-input" type="text" name="phone" required maxlength="1" #text3 (keyup)="move($event, text2, text3, text4)">
-        <input class="otp-input" type="text" name="phone" required maxlength="1" #text4 (keyup)="move($event, text3, text4, '')">
-        <button class="login otp-btn" type="submit">Log  <i class="fa-solid fa-arrow-right"></i></button>
+        <input class="otp-input" type="text" name="phone1" required maxlength="1" #text1 (keyup)="move($event, '', text1, text2)" >
+        <input class="otp-input" type="text" name="phone2" required maxlength="1" #text2 (keyup)="move($event, text1, text2, text3)">
+        <input class="otp-input" type="text" name="phone3" required maxlength="1" #text3 (keyup)="move($event, text2, text3, text4)">
+        <input class="otp-input" type="text" name="phone4" required maxlength="1" #text4 (keyup)="move($event, text3, text4, '')">
+        <button class="login otp-btn" type="submit">Login  <i class="fa-solid fa-arrow-right"></i></button>
       </form>
   </div>
   
