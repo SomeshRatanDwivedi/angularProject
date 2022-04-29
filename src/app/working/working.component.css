@@ -1,12 +1,23 @@
 
 *{
-    font-family:Roboto;
     color: #ffffff;
   }
   body{
       position: relative;
       
   }
+  .body{
+    font-family: 'Roboto', sans-serif;  
+  }
+  .head{
+    font-size: 26px;
+    color: #ffffff;
+    max-width: 374px;
+    margin-bottom: 45px;
+  }
+  input:focus{
+    outline: none;
+}
   .parent{
     caret-color: black;
     width: 32%;
@@ -19,10 +30,12 @@
     right: 14%;
     top: 11%;
     height: 600px;
+    
 }
   .btn-parent{
       display: flex;
       justify-content: space-between;
+      margin-bottom: 50px;
   }
   .input{
       width: 392px;
@@ -87,13 +100,21 @@
       border-radius: 3px;
       padding: 10px;
   }
+  input[type=submit]:focus {
+    background-color:red;
+}
+  .year{
+      height: 25px;
+      display: inline-block;
+  }
   .checkfont{
-      vertical-align: sub;
-      float: right;
-      background-color: #23dbbd;
-      border-radius: 50%;
-      padding: 4px;
-      font-size: 19px;
+    float: right;
+    border-radius: 100%;
+    background-color: #23dbbd;
+    padding: 4px;
+    font-size: 19px;
+    height: 17px;
+    width: 17px;
   }
   .radio{
       opacity: 0;
@@ -119,6 +140,28 @@
     width: 84%;
     border-bottom: 4px dashed rgba(168, 168, 168, 0.4);
     position: absolute;
-    top: 194px;
+    top: 210px;
     z-index: 0;
+  }
+  .subhead{
+    font-size: 20px;
+    color: #ffffff;
+    margin-bottom: 40px;
+  }
+  .background{
+    background-color: #2f2d4a;  
+  }
+  .login{
+    border-radius: 4px;
+    box-shadow: 0 4px 8px 0 rgb(0 0 0 / 20%);
+    border: 0;
+    outline: 0;
+    margin-top: 30px;
+    margin-bottom: 30px;
+    padding: 10px 20px;
+    color: white;
+    font-size: 18px;
+  }
+  .login i{
+      margin-left: 10px;
   }

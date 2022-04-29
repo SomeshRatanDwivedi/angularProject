@@ -23,7 +23,20 @@ export class WorkingComponent implements OnInit {
   selected = "btn1";
   selectedfont = "";
   selectedyear = "";
-
+move(ele:any, prev:any, curr:any, next:any){
+  
+  if(ele.key=="Backspace"){
+    if(prev){
+      prev.focus();
+    }
+  }
+  else{
+    if(next && curr.length==curr.maxlength){
+      next.focus();
+    }
+    
+  }
+}
   onSubmit(ele: any) {
 
   }
