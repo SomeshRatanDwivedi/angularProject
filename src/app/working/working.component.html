@@ -1,5 +1,5 @@
 
-<div class="body">
+ <div class="body">
 <div class="parent">
     <p class="head">Just a few simple steps before we know it's you</p>
     <div class="line"></div>
@@ -7,19 +7,19 @@
       <button class="btn" [ngClass]=" {'blue':selected=='btn1' || selected=='btn2' || selected=='btn3' || selected=='btn4'}" (click)="changeColor(btn1)"> 1 </button>
       <button class="btn" [ngClass]=" {'blue':selected=='btn2' || selected=='btn3' || selected=='btn4'}"  (click)="changeColor(btn2)" > 2 </button>
       <button class="btn" [ngClass]=" {'blue':selected=='btn3' || selected=='btn4'}"  (click)="changeColor(btn3)" >3</button>
-      <button class="btn" [ngClass]=" {'blue':selected=='btn4'}"  (click)="changeColor(btn4)" >  4 </button>
+      <button class="btn" [ngClass]=" {'blue':selected=='btn4'}"  (click)="changeColor(btn4)">4 </button>
   
   </div>
   <div class="first-component"  *ngIf="selected=='btn1'">
     <p class="subhead">Your registered mobile number</p>
-    <form  #firstcomponent="ngForm" class="form" (ngSubmit)="onSubmit(firstcomponent.value)">
+    <form  #firstcomponent1="ngForm" class="form" (ngSubmit)="onSubmit(firstcomponent1.value)">
       <input class="input" type="text" name="phone" required [(ngModel)]="phoneNo" >
       <button class="login" type="submit" (click)="changeColor(btn2)">Login  <i class="fa-solid fa-arrow-right"></i></button>
     </form>
   </div>
   <div class="first-component"  *ngIf="selected=='btn2'">
     <p class="subhead">Kindly verify the pin code of your residential address</p>
-      <form #firstcomponent="ngForm" class="form">
+      <form #firstcomponent2="ngForm" class="form">
           
           <label class="label">
             <input class="input" type="radio" class="radio" name="phone" required>
@@ -58,7 +58,7 @@
   </div>
   <div class="first-component"  *ngIf="selected=='btn3'">
     <p class="subhead">Kindly verify your Year of Birth</p>
-    <form #firstcomponent="ngForm" class="form">
+    <form #firstcomponent3="ngForm" class="form">
         
         <label class="label">
             <span class="checkmark" (click)="changeYear(year1)" [ngClass]="{'background': selectedyear=='year1'}" >
@@ -94,15 +94,21 @@
   </div>
   <div class="first-component"  *ngIf="selected=='btn4'">
     <p class="subhead">Enter the otp</p>
-      <form  #firstcomponent="ngForm" class="form" (ngSubmit)="onSubmit(firstcomponent.value)">
-        <input class="otp-input" type="text" name="phone1" required maxlength="1" #text1 (keyup)="move($event, '', text1, text2)" >
-        <input class="otp-input" type="text" name="phone2" required maxlength="1" #text2 (keyup)="move($event, text1, text2, text3)">
-        <input class="otp-input" type="text" name="phone3" required maxlength="1" #text3 (keyup)="move($event, text2, text3, text4)">
-        <input class="otp-input" type="text" name="phone4" required maxlength="1" #text4 (keyup)="move($event, text3, text4, '')">
+      <form  #firstcomponent4="ngForm" class="form" (ngSubmit)="onSubmit(firstcomponent4.value)">
+    <ng-otp-input (onInputChange)="onOtpChange($event)" *ngIf="showOtpComponent" [config]="config"></ng-otp-input>
+        <span  class="o-t-p">
+          <ng-container *ngIf="otp">
+            Entered otp :-{{otp}}
+          </ng-container>
+          </span>
         <button class="login otp-btn" type="submit">Login  <i class="fa-solid fa-arrow-right"></i></button>
       </form>
   </div>
   
   </div>
-</div>
+</div>  
+
+
+
+
   

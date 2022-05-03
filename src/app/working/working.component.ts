@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, ViewChild } from '@angular/core';
+import { NgOtpInputComponent, NgOtpInputConfig } from 'ng-otp-input';
 
 @Component({
   selector: 'app-working',
@@ -55,6 +56,25 @@ move(ele:any, prev:any, curr:any, next:any){
   changeYear(year:any){
     this.selectedyear=year;
   }
+
+otp?: string;
+showOtpComponent = true;
+  @ViewChild(NgOtpInputComponent, { static: false })
+  ngOtpInput!: NgOtpInputComponent;
+config :NgOtpInputConfig = {
+  allowNumbersOnly: false,
+  length: 4,
+  isPasswordInput: false,
+  disableAutoFocus: false,
+  placeholder: ''
+};
+onOtpChange(otp:any) {
+  this.otp = otp;
+}
+
+setVal(val:any) {
+  this.ngOtpInput.setValue(val);
+}
 
   ngOnInit(): void {
   }

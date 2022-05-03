@@ -4,7 +4,7 @@ import { AppComponent } from './app.component';
 import { RouterModule } from '@angular/router';
 import { FormsModule } from '@angular/forms';
 import { WorkingComponent } from './working/working.component';
-
+import { NgOtpInputModule } from  'ng-otp-input';
 @NgModule({
   declarations: [
     AppComponent,
@@ -13,6 +13,7 @@ import { WorkingComponent } from './working/working.component';
   imports: [
     BrowserModule,
     FormsModule,
+    NgOtpInputModule,
     RouterModule.forRoot([
      {
        path:"working",
